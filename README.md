@@ -1,1 +1,1 @@
-# chnu_devops-prac
+# Medici project

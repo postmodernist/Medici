@@ -1,43 +1,46 @@
 # Services
 
-## Common services
-1. Auth (simple)
-2. User (Clear)
-3. Blacklist (N-layer)
-3. ResourceAG (Clear)
-4. FileStorageAPI (simple)
-5. Devices storage (simple)
+### Identity
+1. Identity (SQL Server)
 
-## Marlet
-1. Cart (NL)
-2. Catalog (Clear)
-3. Customer (NL)
-4. Order (Clear)
+###  User
+1. Blacklist (MongoDB + Redis + GRPC)
+2. Friend 
+3. User
+4. Feed
+5. Setting 
+6. Device
 
-## Messenger 
-1. MessageSender (Clear)
-2. Conversation (N-layer)
-3. Report (simple)
-## Wallet 
-1. Wallet 
-2. PaymentsAPI
+### Resources
+1. ResourceAG
+2. FileStorageAPI
 
-## Publications
-0. PublicationAG
-1. Publication()
-2. Bookmark
-3. Article
+### Image
+1. ImageAlbum 
 
-## Society
-1. SocietyAG(Democrasy Dictator Anarchy)
-2. DiscussuionBoards
+### Market 
+1. Cart
+2. Catalog
+3. Customer 
+4. Order
 
-## Images
-1. Album
+### Messenger
+1. Conversation
+2. Courier
+3. Report?
 
-## Music
-1. Streamer
+### Publication
+1. Post
+2. Article 
+3. Bookmark 
+
+### Society
+1. SocietyAG
+2. DiscussionBoards
+
+### Music 
+1. Library
 2. MusicAlbum
-3. Playlist
-4. Library 
+3. Playlist 
+4. Streamer 
 

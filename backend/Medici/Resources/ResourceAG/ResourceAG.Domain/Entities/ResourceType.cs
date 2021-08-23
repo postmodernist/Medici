@@ -2,6 +2,10 @@
 {
     public enum ResourceType
     {
-        
+        Image,
+        Music,
+        Document,
+        Markdown,
+        Zip,
     }
 }

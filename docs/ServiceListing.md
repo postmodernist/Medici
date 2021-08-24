@@ -5,42 +5,43 @@
 
 ###  User
 1. Blacklist (MongoDB + Redis + GRPC)
-2. Friend 
-3. User
-4. Feed
-5. Setting 
-6. Device
+2. Friend (MongoDB)
+3. User (SQL Server)
+4. Feed (NO DB)
+5. Setting (SQL Server)
+6. Device(SQL Server)
 
 ### Resources
-1. ResourceAG
-2. FileStorageAPI
+1. ResourceAG (SQL Server)
+2. FileStorageAPI (SQL Server)
 
 ### Image
-1. ImageAlbum 
+1. ImageAlbum (MongoDB)
 
 ### Market 
-1. Cart
-2. Catalog
-3. Customer 
-4. Order
+1. Cart (MongoDB)
+2. Catalog (SQL Server)
+3. Customer (Mongo)
+4. Order (Mongo)
 
 ### Messenger
-1. Conversation
-2. Courier
+1. Conversations
+2. Attachments 
 3. Report?
 
 ### Publication
-1. Post
-2. Article 
-3. Bookmark 
+1. PublicationAG (SQL Server)
+2. Post (SQL Server)
+3. Article (SQL Server)
+4. Bookmark (MongoDB)
 
 ### Society
-1. SocietyAG
-2. DiscussionBoards
+1. SocietyAG (SQL Server)
+2. DiscussionBoards (SQL Server)
 
 ### Music 
-1. Library
-2. MusicAlbum
-3. Playlist 
-4. Streamer 
+1. Library (MongoDB)
+2. MusicAlbum (MongoDB)
+3. Playlist (MongoDB)
+4. Streamer (Kafka Streams ksql)
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Settings.BLL
+namespace Bookmark.BLL
 {
     public class Class1
     {

@@ -22,7 +22,6 @@ namespace Posts.BLL.Services
         public async Task<IEnumerable<PostViewModel>> GetPosts()
         {
             var result = _mapper.Map<IEnumerable<PostViewModel>>(await _unitOfWork.PostRepository.GetAllAsync());
-            //todo modify result
             foreach (var post in result)
             {
               // todo modify   

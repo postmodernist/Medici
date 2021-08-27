@@ -34,6 +34,7 @@ namespace Posts.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Posts.API", Version = "v1" });
             });
             services.AddAutoMapper(typeof(MappingProfile));
+            //ToDo Create controllers and kafka grpc integration
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

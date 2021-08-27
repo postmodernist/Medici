@@ -28,6 +28,18 @@ namespace Identity.API
         {
 
             services.AddControllers();
+            services.AddIdentityServer()
+                .AddOperationalStore(opt =>
+                {
+                    opt.EnableTokenCleanup = true;
+                    opt.TokenCleanupInterval = 3600;
+                })
+                .AddInMemoryClients(Config.Clients())
+                .AddInMemoryIdentityResources(Config.IdentityResources())
+                .AddInMemoryApiResources(Config.ApiResources())
+                .AddInMemoryApiScopes(Config.ApiScopes())
+                .AddTestUsers(Config.TestUsers())
+                .AddDeveloperSigningCredential();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Identity.API", Version = "v1" });

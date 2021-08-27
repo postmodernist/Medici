@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FileStorage.Domain\FileStorage.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Interfaces\" />
+    <Folder Include="FileItems\Commands\" />
+    <Folder Include="FileItems\Queries\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Mapper\" />
+  </ItemGroup>
+
+</Project>

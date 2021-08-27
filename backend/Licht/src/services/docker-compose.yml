@@ -1,0 +1,78 @@
+version: '3.4'
+
+services:
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/ApiGateway/Dockerfile
+
+  aggregator:
+    image: ${DOCKER_REGISTRY-}aggregator
+    build:
+      context: .
+      dockerfile: ApiGateway/Aggregator/Dockerfile
+
+
+  article.api:
+    image: ${DOCKER_REGISTRY-}articleapi
+    build:
+      context: .
+      dockerfile: Article/Article.API/Dockerfile
+
+
+  bookmark.api:
+    image: ${DOCKER_REGISTRY-}bookmarkapi
+    build:
+      context: .
+      dockerfile: Bookmark/Bookmark.API/Dockerfile
+
+
+  comment.api:
+    image: ${DOCKER_REGISTRY-}commentapi
+    build:
+      context: .
+      dockerfile: Comment/Comment.API/Dockerfile
+
+
+  feed.api:
+    image: ${DOCKER_REGISTRY-}feedapi
+    build:
+      context: .
+      dockerfile: Feed/Feed.API/Dockerfile
+
+
+  filestorage.api:
+    image: ${DOCKER_REGISTRY-}filestorageapi
+    build:
+      context: .
+      dockerfile: FileStorage/FileStorage.API/Dockerfile
+
+
+  identity.api:
+    image: ${DOCKER_REGISTRY-}identityapi
+    build:
+      context: .
+      dockerfile: Identity/Identity.API/Dockerfile
+
+
+  imagealbum.api:
+    image: ${DOCKER_REGISTRY-}imagealbumapi
+    build:
+      context: .
+      dockerfile: ImageAlbum/ImageAlbum.API/Dockerfile
+
+
+  posts.api:
+    image: ${DOCKER_REGISTRY-}postsapi
+    build:
+      context: .
+      dockerfile: Posts/Posts.API/Dockerfile
+
+  user.api:
+    image: ${DOCKER_REGISTRY-}userapi
+    build:
+      context: .
+      dockerfile: User/User.API/Dockerfile
+
+

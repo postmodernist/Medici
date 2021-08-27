@@ -9,8 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="MongoDbSettings\" />
+    <Folder Include="MongoDbConfig\" />
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />
   </ItemGroup>

@@ -20,7 +20,7 @@ Communitaion into microservices
 Unit tests, Moq,  Intergrational
 ### 10. Docker + K8s 4
 
-## Music streaming 
+## Music streaming selaed
 ### Services:
 1. Library (N-layer + Entity Framework)
 2. Playlist (Clean Architecture + Redis + Mongo) 

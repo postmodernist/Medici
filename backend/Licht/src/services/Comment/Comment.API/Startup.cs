@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Comment.BLL.MappingProfiles;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,8 @@ namespace Comment.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Comment.API", Version = "v1" });
             });
+            services.AddAutoMapper(typeof(MappingProfile));
+            // Todo add controllers and grpc and kafka integration
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

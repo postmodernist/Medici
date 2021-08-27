@@ -6,8 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Dtos\Cart\" />
-    <Folder Include="Dtos\Catalog\" />
-    <Folder Include="Dtos\Discount\" />
     <Folder Include="Dtos\FileStorage\" />
     <Folder Include="Dtos\Order\" />
     <Folder Include="ViewModels\Cart\" />

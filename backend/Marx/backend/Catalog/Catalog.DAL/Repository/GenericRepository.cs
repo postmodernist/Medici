@@ -1,40 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Catalog.DAL.Infrastrucutre;
+using Catalog.DAL.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using User.DAL.Infrastructure;
-using User.DAL.Interfaces;
-using User.DAL.Interfaces.Repositories;
 
-namespace User.DAL.Repositories
+namespace Catalog.DAL.Repository
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class, IEntity
+    public class GenericRepository<T>:IGenericRepository<T> where T: class, IEntity
     {
-        private readonly UserDbContext _context;
-
+        private readonly CatalogDbContext _context;
         public GenericRepository()
         {
-            _context = new UserDbContext();
+            _context = new CatalogDbContext();
         }
-        public async Task<T> Add(T entity)
+        public async Task<T> AddAsync(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
             await _context.SaveChangesAsync();
             return entity;
         }
 
-        public async Task<T> Delete(int id)
+        public async Task DeleteAsync(int id)
         {
             var entity = await _context.Set<T>().FirstOrDefaultAsync(e => e.Id == id);
             if (entity == null)
             {
-                throw new ArgumentNullException($"{nameof(Add)} entity with id = {id} does not exist");
+                throw new ArgumentNullException($"{nameof(AddAsync)} entity with id = {id} does not exist");
             }
             try
             {
                 _context.Set<T>().Remove(entity);
                 await _context.SaveChangesAsync();
-                return entity;
             }
             catch (Exception ex)
             {
@@ -42,22 +39,22 @@ namespace User.DAL.Repositories
             }
         }
 
-        public async Task<IEnumerable<T>> GetAll()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<T> GetById(int id)
+        public async Task<T> GetByIdAsync(int id)
         {
             return await _context.Set<T>().FirstOrDefaultAsync(e => e.Id == id);
         }
 
-        public async Task<T> Update(T entity)
+        public async Task<T> UpdateAsync(T entity)
         {
 
             if (entity == null)
             {
-                throw new ArgumentNullException($"{nameof(Add)} entity must not be null");
+                throw new ArgumentNullException($"{nameof(AddAsync)} entity must not be null");
             }
 
             try

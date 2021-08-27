@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Catalog.BLL.Interfaces;
+using Catalog.BLL.MappingProfile;
+using Catalog.BLL.Services;
+using Catalog.DAL.Interfaces;
+using Catalog.DAL.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +37,9 @@ namespace Catalog.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Catalog.API", Version = "v1" });
             });
+            services.AddTransient<ICatalogService, CatalogService>();
+            services.AddTransient<ICatalogItemRepository, CatalogItemRepository>();
+            services.AddAutoMapper(typeof(MappingProfile));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

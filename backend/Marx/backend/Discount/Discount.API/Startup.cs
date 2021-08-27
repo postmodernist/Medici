@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Discount.BLL.Interfaces;
+using Discount.BLL.MappingProfile;
+using Discount.BLL.Services;
+using Discount.DAL.Interfaces;
+using Discount.DAL.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +22,9 @@ namespace Discount.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddGrpc();
+            services.AddAutoMapper(typeof(MappingProfile));
+            services.AddTransient<IDiscountRecordRepository, DiscountRecordRepository>();
+            services.AddTransient<IDiscountService, DiscountService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

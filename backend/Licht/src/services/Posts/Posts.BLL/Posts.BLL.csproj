@@ -8,4 +8,8 @@
     <ProjectReference Include="..\Posts.DAL\Posts.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MappingProfile\" />
+  </ItemGroup>
+
 </Project>

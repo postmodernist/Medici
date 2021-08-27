@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <Folder Include="Dtos\Bookmark\" />
+    <Folder Include="ViewModels\ImageAlbum\" />
   </ItemGroup>
 
 </Project>

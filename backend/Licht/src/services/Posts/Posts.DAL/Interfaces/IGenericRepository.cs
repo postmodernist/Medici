@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using LichtDataPack.Interfaces.Entity;
 
 namespace Posts.DAL.Interfaces
 {

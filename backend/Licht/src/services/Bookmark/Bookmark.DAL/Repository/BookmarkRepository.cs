@@ -8,8 +8,10 @@ namespace Bookmark.DAL.Repository
 {
     public class BookmarkRepository: GenericRepository<BookmarkRecord> ,IBookmarkRepository
     {
-        public BookmarkRepository(BookmarkDbContext context) : base(context)
+        private readonly BookmarkDbContext _context = new BookmarkDbContext();
+        public BookmarkRepository(BookmarkDbContext context) : base(context )
         {
+            context = _context;
         }
     }
 }
